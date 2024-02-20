@@ -1,6 +1,7 @@
+import 'package:bond007/components/Listview.dart';
 import 'package:flutter/material.dart';
 
-import 'homepage.dart';
+import 'pages/homepage.dart';
 
 
 void main() {
@@ -18,10 +19,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
 
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        
       ),
-      home: homepage(),
+      home:homepage(),
 
     );
   }

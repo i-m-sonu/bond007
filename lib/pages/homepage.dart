@@ -1,8 +1,12 @@
-import 'package:bond007/navbar.dart';
+import 'package:bond007/components/Listview.dart';
+import 'package:bond007/components/Status.dart';
+import 'package:bond007/components/feedbar.dart';
+import 'package:bond007/components/navbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-import 'drawer.dart';
+import '../components/drawer.dart';
 
 class homepage extends StatefulWidget {
   @override
@@ -19,7 +23,6 @@ class _homepageState extends State<homepage> {
           "HomePage",
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
-        backgroundColor: Colors.white,
         actions: [
           Row(
             children: [
@@ -37,9 +40,18 @@ class _homepageState extends State<homepage> {
           )
         ],
       ),
-
       drawer: drawer(),
-      bottomNavigationBar: navbar(),
+      // bottomNavigationBar: Navbar(),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Status(),
+          SizedBox(height: 20,),
+
+          MyListView()
+          ],
+        ),
+      ),
     );
   }
 }
